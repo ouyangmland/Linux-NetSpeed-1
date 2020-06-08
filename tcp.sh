@@ -703,7 +703,8 @@ net.core.netdev_max_backlog = 32768
 net.ipv4.tcp_timestamps = 0
 net.ipv4.tcp_max_orphans = 32768
 # forward ipv4
-net.ipv4.ip_forward = 1">>/etc/sysctl.conf
+net.ipv4.ip_forward = 1
+net.ipv4.tcp_congestion_control = hybla">>/etc/sysctl.conf
 	sysctl -p
 	echo "*               soft    nofile           1000000
 *               hard    nofile          1000000">/etc/security/limits.conf
