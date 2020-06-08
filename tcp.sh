@@ -234,11 +234,11 @@ installlot(){
 	if [[ "${release}" == "centos" ]]; then
 		rpm --import http://${github}/lotserver/${release}/RPM-GPG-KEY-elrepo.org
 		yum remove -y kernel-firmware
-		yum install -y http://${github}/lotserver/${release}/${version}/${bit}/kernel-firmware-${kernel_version}.rpm
-		yum install -y http://${github}/lotserver/${release}/${version}/${bit}/kernel-${kernel_version}.rpm
+		yum install -y http://${github}/raw/master/lotserver/${release}/${version}/${bit}/kernel-firmware-${kernel_version}.rpm
+		yum install -y http://${github}/raw/master/lotserver/${release}/${version}/${bit}/kernel-${kernel_version}.rpm
 		yum remove -y kernel-headers
-		yum install -y http://${github}/lotserver/${release}/${version}/${bit}/kernel-headers-${kernel_version}.rpm
-		yum install -y http://${github}/lotserver/${release}/${version}/${bit}/kernel-devel-${kernel_version}.rpm
+		yum install -y http://${github}/raw/master/lotserver/${release}/${version}/${bit}/kernel-headers-${kernel_version}.rpm
+		yum install -y http://${github}/raw/master/lotserver/${release}/${version}/${bit}/kernel-devel-${kernel_version}.rpm
 	elif [[ "${release}" == "ubuntu" ]]; then
 		bash <(wget -qO- "https://${github}/Debian_Kernel.sh")
 	elif [[ "${release}" == "debian" ]]; then
