@@ -563,7 +563,7 @@ startlotserver(){
 		apt-get update
 		apt-get install ethtool
 	fi
-	bash <(wget -qO- https://git.io/lotServerInstall.sh) install
+	bash <(wget -qO- https://github.com/ouyangmland/lotServer-1/raw/master/lotServerInstall.sh) install
 	sed -i '/advinacc/d' /appex/etc/config
 	sed -i '/maxmode/d' /appex/etc/config
 	echo -e "advinacc=\"1\"
