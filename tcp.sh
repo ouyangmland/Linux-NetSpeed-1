@@ -707,7 +707,7 @@ net.ipv4.tcp_max_orphans = 32768
 # forward ipv4
 net.ipv4.ip_forward = 1
 net.ipv4.tcp_congestion_control = hybla">>/etc/sysctl.conf
-echo "/sbin/modprobe tcp_hybla">>/etc/rc.d/rc.local
+
 	sysctl -p
 	echo "*               soft    nofile           1000000
 *               hard    nofile          1000000">/etc/security/limits.conf
